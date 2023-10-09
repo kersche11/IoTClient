@@ -1,0 +1,14 @@
+<div>
+  <button type="button" class="btn btn-success m-2" (click)="OnSwitchAllOn()">
+    ON
+  </button>
+  <button type="button" class="btn btn-warning" (click)="OnSwitchAllOff()">
+    Off
+  </button>
+</div>
+
+<div class="row row-cols-5 g-3">
+  <div class="col" *ngFor="let light of lights">
+    <app-light-control-item [light]="light"></app-light-control-item>
+  </div>
+</div>
